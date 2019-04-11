@@ -1,0 +1,32 @@
+{
+    "id": "nats-streaming",
+    "instances": 1,
+    "cpus": 0.2,
+    "mem": 512,
+    "container": {
+        "type": "DOCKER",
+        "docker": {
+            "image": "nats-streaming:0.12.0",
+            "network": "BRIDGE",
+            "portMappings": [{
+                    "containerPort": 4222,
+                    "hostPort": 4222
+                },
+                {
+                    "containerPort": 8222,
+                    "hostPort": 8222
+                }
+            ],
+            "forcePullImage": false
+        },
+        "args": ["-p", "4222", "-m", "8222", "--max_channels", "200"]
+    },
+    "healthChecks": [{
+        "protocol": "MESOS_TCP",
+        "gracePeriodSeconds": 30,
+        "intervalSeconds": 10,
+        "timeoutSeconds": 5,
+        "portIndex": 1,
+        "maxConsecutiveFailures": 0
+    }]
+}
