@@ -1,6 +1,6 @@
 # vamp-examples
 
-This git repo hold an archive of recommended templates for Kubernetes or Marathon schedulers.o<br/>
+This git repo hold an archive of recommended templates for Kubernetes or Marathon schedulers.<br/>
 To configure and rollout VAMP with all the requires dependencies.
 
 ## Directory structure
