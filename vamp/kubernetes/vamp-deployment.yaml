@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: vamp
-        image: ${VAMP_IMAGE}
+        image: magneticio/vamp-ee:${VAMP_IMAGE}
         ports:
         - containerPort: 8080
           protocol: TCP
