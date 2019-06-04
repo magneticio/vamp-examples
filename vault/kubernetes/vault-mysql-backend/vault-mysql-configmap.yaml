@@ -8,7 +8,7 @@ metadata:
 data:
   config.hcl: |
       backend "mysql" {
-       address = "${MYSQL_ENDPOINT}:3306"
+       address = "${MYSQL_ENDPOINT}"
        username = "${MYSQL_USERNAME}"
        password = "${MYSQL_PASSWORD}"
       }
